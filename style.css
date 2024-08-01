@@ -1,0 +1,35 @@
+.calculator {
+    display: flex;
+    flex-direction: column;
+    border: 2px black solid;
+    height: 720px;
+    width: 560px;
+    box-sizing: border-box;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+    flex: 1;
+}
+
+#result {
+    flex-grow: 3;
+    margin: 5px;
+    background-color: rgba(0, 255, 255, 0.276);
+    font-size: 2em;
+    height: 4em;
+    width: 350px;
+}
+
+#clear {
+    flex-grow: 2;
+    background-color: rgba(255, 0, 0, 0.331);
+    
+}
+
+button {
+    flex: 1;
+    margin: 5px;
+    font-size: 20px;
+}
