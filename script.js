@@ -1,17 +1,21 @@
 function add(a, b) {
-    return a + b;
+    displayValue = a + b;
+    return displayValue;
 }
 
 function subtract(a, b) {
-    return a - b;
+    displayValue = a - b;
+    return displayValue;
 }
 
 function multiply(a, b) {
-    return a * b;
+    displayValue = a * b;
+    return displayValue;
 }
 
 function divide(a, b) {
-    return a / b;
+    displayValue =  a / b;
+    return displayValue;
 }
 
 let firstNumber;
@@ -35,4 +39,31 @@ function operate(number1, number2, operator) {
     }
 }
 
+function addTextToInput(text) {
+    const inputField = document.getElementById('result');
+    inputField.value = text;
+  }
+
 let displayValue;
+
+const textDisplay = document.querySelector('#result');
+const buttons = document.querySelectorAll('button');
+
+buttons.forEach(button => {
+    button.addEventListener('click', function() {
+        const value = button.innerText;
+
+        if(button.id === "clear") {
+            textDisplay.value = '';
+        }
+
+        else if(button.id === "equal") {
+            // calculate with operate
+        }
+
+        else {
+            textDisplay.value += value;
+        }
+    })
+})
+
